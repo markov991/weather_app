@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: #fff;
+}
+
+*:hover {
+  cursor: default;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  height: 100vh;
+
+  background-image: linear-gradient(#2f80ed, #56ccf2);
+
+  background-repeat: no-repeat;
+}
+
+.container {
+  max-width: 60rem;
+  border-radius: 8px;
+
+  margin: 1.2rem auto;
+  height: 80vh;
+  padding: 1.2rem;
+
+  box-shadow: 2px 2px 5px #86868641;
+}
+.search-container {
+  width: 100%;
+  display: flex;
+  border-bottom: 2px solid #b3b3b3;
+  position: relative;
+}
+
+.search-input {
+  width: inherit;
+
+  padding: 1rem;
+  font-size: 1.4rem;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+
+.search-input:hover {
+  cursor: text;
+  box-shadow: 0 0 2px #fcfcfc31;
+}
+
+.search-input::placeholder {
+  color: #cecece;
+}
+.search-icon {
+  height: 2rem;
+  width: 2rem;
+  margin: auto 1rem;
+
+  filter: invert(0.8);
+}
+.city-name {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+}
+
+.current-weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+  gap: 1rem;
+}
+
+.forecast-curr-day,
+.forecast-day {
+  display: flex;
+}
+.current-temperature {
+  font-size: 3rem;
+}
+
+.forecast-curr-day {
+  font-size: 1.4rem;
+}
+.condition {
+  text-align: center;
+}
+.condition-img {
+  height: 6.4rem;
+  width: 6.4rem;
+}
+
+.weather-forecast-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.forecast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.search-results {
+  position: absolute;
+  top: 4.6rem;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+
+  background-color: #495057e7;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.search-result {
+  font-size: 2rem;
+  color: aliceblue;
+  z-index: 1000;
+}
+
+.search-icon:is(:hover, :active),
+.search-result:is(:hover, :active) {
+  cursor: pointer;
+}
+
+.blur {
+  filter: blur(5px);
+}
+
+.hidden {
+  display: none;
+}
